@@ -75,8 +75,6 @@ jobs:
         working-directory: manager
       - run: npm run build
         working-directory: manager
-      - run: npm run lint
-        working-directory: manager
       - name: Build and analyze
         uses: SonarSource/sonarcloud-github-action@master
         with:

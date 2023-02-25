@@ -37,8 +37,7 @@ jobs:
         uses: github/codeql-action/init@v2
         with:
           languages: "java"
-      - name: Autobuild
-        uses: github/codeql-action/autobuild@v2
+      - name: Run command build code
         run: mvn clean install -DskipTests -f cart
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v2

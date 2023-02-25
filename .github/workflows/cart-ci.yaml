@@ -10,7 +10,7 @@ on:
     branches: ["main"]
     paths:
       - "cart/**"
-      - ".github/workflows/cart-ci.yml"
+      - ".github/workflows/cart-ci.yaml"
 
   workflow_dispatch:
     

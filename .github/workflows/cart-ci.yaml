@@ -113,5 +113,5 @@ jobs:
         with:
           context: ./cart
           push: true
-          tags: ghcr.io/tanhao111/bookstore-cart:latest
+          tags: ghcr.io/tanhaok/bookstore-cart:latest
     

@@ -95,6 +95,10 @@ jobs:
     needs: Build
     runs-on: ubuntu-latest
     name: Test code
+    permissions:
+      id-token: write
+      contents: read
+      checks: write
     steps:
       - uses: actions/checkout@v3
         with:

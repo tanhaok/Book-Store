@@ -60,8 +60,10 @@ jobs:
           node-version: 16
       - name: Run CI Command
         run: npm ci
+        working-directory: manager
       - name: Run Build Command
         run: npm run build
+        working-directory: manager
 # Will add unit test job later
   Deploy:
     needs: Build
@@ -76,8 +78,10 @@ jobs:
           node-version: 16
       - name: Run CI Command
         run: npm ci
+        working-directory: manager
       - name: Run Build command
         run: npm run build
+        working-directory: manager
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
       - name: Log in to the Container registry

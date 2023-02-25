@@ -16,7 +16,7 @@ on:
     
 jobs:
   Analyze-CodeQL:
-    name: Analyze code
+    name: Analyze code with CodeQL
     runs-on: ubuntu-latest
     permissions:
       actions: read
@@ -31,7 +31,7 @@ jobs:
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v2
         with:
-          language: java
+          languages: "java"
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v2
         with:
@@ -107,6 +107,7 @@ jobs:
           path: "cart/**/surefire-report/*.xml"
           reporter: java-junit
   Deploy:
+    needs: Build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3

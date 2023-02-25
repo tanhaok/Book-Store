@@ -35,7 +35,7 @@ jobs:
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v2
         with:
-          category: "/language/java"
+          category: "/language:java"
 
   Analyze-SonarCloud:
     needs: Analyze-CodeQL

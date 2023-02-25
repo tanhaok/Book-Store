@@ -111,7 +111,7 @@ jobs:
         if: always()
         with:
           name: Unit Test For Cart Result
-          path: "cart/**/surefire-report/*.xml"
+          path: "cart/**/surefire-reports/*.xml"
           reporter: java-junit
   Deploy:
     needs: Build

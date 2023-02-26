@@ -1,21 +1,11 @@
 # Book-Store
 ### Technology
-#### Languages:
 - Java
-- Python
-- NodeJS
 - Dart
 - TypeScript
-- Go (Maybe)
-
-#### Framework
 - Spring Boot
-- Django
-- Express
 - Fullter
-- NextJS/ReactJS/Angualar
-
-#### Tools
+- NextJS
 - Keycloak
 
 ### Architecture

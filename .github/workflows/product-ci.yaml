@@ -43,7 +43,7 @@ jobs:
         uses: github/codeql-action/analyze@v2
         with:
           category: "/language:java"
-          
+
   Analyze-Sonar:
     name: Build and Analyze With Sonar Cloud
     runs-on: ubuntu-latest
@@ -71,7 +71,7 @@ jobs:
       - name: Build and analyze
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.PRODUCT_SONAR_TOKEN }}
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -f product
 
   Build:

@@ -6,14 +6,19 @@ const Home = () => {
       <div className="d-flex flex-column justify-content-center w-100 h-100">
         <div className="d-flex flex-column justify-content-center align-items-center">
           <h1 className="fw-light text-white m-0">
-            Hello, Welcome to Book Store Management System
+            Hello, Welcome To Book Store Management System
           </h1>
-          <div className="btn-group my-5">
+          <div className="btn-group mt-5 mb-1">
             <button className="btn btn-outline-light">
-             Log In To Continue 
+              Log In With Google
             </button>
           </div>
-          <div className="text-decoration-none">
+          <div className="btn-group mb-5">
+            <button className="btn btn-outline-light">
+              Log In With Github
+            </button>
+          </div>
+          <div>
             <h5 className="fw-light text-white m-0">— Develop by @tanhaok —</h5>
           </div>
         </div>

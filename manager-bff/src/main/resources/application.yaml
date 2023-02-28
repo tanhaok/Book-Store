@@ -1,0 +1,38 @@
+server:
+  port: 8081
+  url: localhost
+spring:
+  application:
+    name: Manager BFF
+  profiles:
+    active: dev
+#  security:
+#    oauth2:
+#      client:
+#        registration:
+#          google:
+#            clientId: 93006914061-rbbradp6btjfm1c9htthc0cc5nc0e5fk.apps.googleusercontent.com
+#            clientSecret: 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
+#            scope: openid, profile, email
+#      resourceserver:
+#        jwt:
+#          issuer-uri: https://accounts.google.com
+#          jwk-set-uri: https://www.googleapis.com/oauth2/v3/certs
+
+---
+spring:
+  config:
+    activate:
+      on-profile: "dev"
+  cloud:
+    gateway:
+      routes:
+        - id: api
+          uri: http://localhost:8080
+          predicates:
+            - Path=/api/product/**
+        - id: nextjs
+          uri: http://localhost:3000
+          predicates:
+            - Path=/**
+---

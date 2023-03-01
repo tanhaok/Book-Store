@@ -48,7 +48,7 @@ jobs:
           category: "/language:javascript"
 
   Analyze-SonarCloud:
-    name: SonarCloud
+    name: Build and Analyze With Sonar Cloud
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3

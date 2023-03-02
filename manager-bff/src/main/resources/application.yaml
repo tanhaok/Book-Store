@@ -13,7 +13,7 @@ spring:
           google:
             clientId: 93006914061-2gj4hkeuerdibbpd2h1o6b1dc1a9aobr.apps.googleusercontent.com
             clientSecret: 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
-            redirectUri: http://localhost:8081/oauth2/callback/google
+            redirectUri: http://localhost:8081/management
             scope: openid, profile, email
 
 ---

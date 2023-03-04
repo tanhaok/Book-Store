@@ -14,17 +14,18 @@ public class SecurityConfig {
   @Bean
   public SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http)
       throws Exception {
-    return http.authorizeExchange()
-//        .pathMatchers("/").permitAll()
+    http
+        .authorizeExchange()
         .pathMatchers("**/*.js", "**/*.css").permitAll()
-        .pathMatchers("/actuator/prometheus").permitAll()
-        .anyExchange().hasAnyRole("ADMIN")
+        .pathMatchers("/management").permitAll()
+        .anyExchange().authenticated()
         .and()
         .oauth2Login()
         .and()
-        .httpBasic().disable()
+        .csrf().disable()
         .formLogin().disable()
-        .csrf().disable().build();
+        .cors().disable();
+    return http.build();
   }
 }
 

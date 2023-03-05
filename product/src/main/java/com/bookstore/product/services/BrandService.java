@@ -5,6 +5,7 @@ import com.bookstore.product.viewmodel.BrandPostVm;
 import com.bookstore.product.viewmodel.BrandVm;
 import java.util.List;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 
 public interface BrandService {
     List<BrandVm> getAllBrand(int pageNo);
@@ -18,10 +19,6 @@ public interface BrandService {
     ResponseEntity<?> activeBrand(Long brandId);
 
     ResponseEntity<?> disActiveBrand(Long brandId);
-
-    ResponseEntity<?> activeBrands(List<Long> brandIds);
-
-    ResponseEntity<?> disActiveBrands(List<Long> brandIds);
 
     ResponseEntity<?> createNewBrand(BrandPostVm brand);
 }
